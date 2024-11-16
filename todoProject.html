@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <style>
+    body{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .rouge,
+    .ajouter{
+      display:grid;
+      grid-template-columns: 200px 150px 100px 100px;
+      column-gap:10px;
+      row-gap:10px;
+      align-items: center;
+    }
+    
+    .ajouter{
+      margin-bottom: 10px;
+      align-items: stretch;
+    }
+
+    .la-date,
+    .lheure{
+      padding: 6px;
+    }
+    .bouton{
+      background-color: rgb(24, 134, 24);
+      color: beige;
+      border: none;
+      font-weight: bold; 
+      padding: 10px;
+    }
+    .la-date,
+    .lheure{
+      font-size: 15px;
+      padding: 7px;
+    }
+    
+    .supprimer{
+      background-color: rgb(138, 63, 63);
+      color: beige;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 10px;
+    }
+     
+  </style>
+</head>
+<body>
+  <h2>My To Do Liste</h2>
+
+  <div class="ajouter">
+    <input placeholder="to do name" class="js-name-input">
+    <input type="date" class="la-date">
+    <input type="time" class="lheure">
+    <button class="bouton" onclick="addTodo();
+    ">Adding</button>
+   </div>
+
+  <div class = "js-todo-list rouge"></div>
+
+  <script src="scripts/to_do_pro.js"></script>
+    
+ 
+</body>
+</html>
